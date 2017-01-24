@@ -6,8 +6,11 @@
 //  Copyright © 2017 Angie Linton. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h> 
+@class ToDo; 
 
 @interface DetailViewController : UIViewController
 
+//@property (nonatomic) NSString *title;
+@property (nonatomic) ToDo *todo;
 @end

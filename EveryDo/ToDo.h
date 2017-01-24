@@ -12,8 +12,8 @@
 
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *todoDescription;
-@property (nonatomic) int priorityNumber;
-@property (nonatomic) BOOL isCompleteIndicator;
+@property (nonatomic) NSString  *priority;
+@property (nonatomic) BOOL isComplete;
 
 @end
 

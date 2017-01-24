@@ -12,9 +12,9 @@
 #import "ToDo.h"
 #import "ListTableViewCell.h"
 
-@interface MasterViewController ()
+@interface MasterViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property NSMutableArray *toDos;
+@property (nonatomic) NSMutableArray<ToDo*> *toDos;
 
 @end
 
@@ -27,37 +27,37 @@
     
     ToDo *todo = [[ToDo alloc]init];
     todo.title = @"Get dressed";
-    todo.todoDescription = @"Choose appropriate clothing";
-    todo.priorityNumber = 1;
-    todo.isCompleteIndicator = NO;
+    todo.todoDescription = @"Choose appropriate clothing for the weather and your activities for the day.";
+    todo.priority = @"1";
+    todo.isComplete = NO;
     [_toDos addObject:todo];
     
     todo = [[ToDo alloc]init];
     todo.title = @"Feed Dogs";
-    todo.todoDescription = @"Put kibble and yogurt in bowl";
-    todo.priorityNumber = 2;
-    todo.isCompleteIndicator = NO;
+    todo.todoDescription = @"Put the kibble and yogurt in their bowls; check to see if they need water.";
+    todo.priority = @"2";
+    todo.isComplete = NO;
     [_toDos addObject:todo];
     
     todo = [[ToDo alloc]init];
     todo.title = @"Eat Breakfast";
-    todo.todoDescription = @"Make a healthy choice";
-    todo.priorityNumber = 3;
-    todo.isCompleteIndicator = NO;
+    todo.todoDescription = @"Make a healthy choice.  Did you include some fruit or protein?";
+    todo.priority = @"3";
+    todo.isComplete = NO;
     [_toDos addObject:todo];
     
     todo = [[ToDo alloc]init];
     todo.title = @"Clean up";
-    todo.todoDescription = @"Put dishes away and wipe the table";
-    todo.priorityNumber = 4;
-    todo.isCompleteIndicator = NO;
+    todo.todoDescription = @"Put dishes away, in the dishwasher and wipe the table.";
+    todo.priority = @"4";
+    todo.isComplete = NO;
     [_toDos addObject:todo];
     
     todo = [[ToDo alloc]init];
     todo.title = @"Brush your teeth";
-    todo.todoDescription = @"Get all the sides, top and bottom";
-    todo.priorityNumber = 3;
-    todo.isCompleteIndicator = NO;
+    todo.todoDescription = @"Get all the sides, top and bottom.  Don't forget to floss and rinse. ";
+    todo.priority = @"5";
+    todo.isComplete = NO;
     [_toDos addObject:todo];
     
 
@@ -86,10 +86,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListTableViewCell *cell =(ListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"defaultCell" forIndexPath:indexPath];
-    ToDo *todo = self.toDos[indexPath.row];
-    [cell.titleLabel setText:todo.title];
+    
+    ToDo *title = self.toDos[indexPath.row];
+    [cell.titleLabel setText:title.title];
+    
+    ToDo *description = self.toDos[indexPath.row];
+    [cell.descriptionLabel setText:description.todoDescription];
 
+    ToDo *priority = self.toDos[indexPath.row];
+    [cell.priorityLabel setText:priority.priority];
 
+    
     return cell;
 }
 
@@ -107,6 +114,9 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
 }
+
+    
+
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -117,9 +127,9 @@
     
     NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
     
-    NSString *title = self.toDos[indexPath.row];
+    ToDo *todo = self.toDos[indexPath.row];
     
-    vc.title = title;
+    vc.todo = todo;
 }
 
 
