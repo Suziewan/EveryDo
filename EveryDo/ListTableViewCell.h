@@ -1,5 +1,5 @@
 //
-//  DetailViewController.h
+//  ListTableViewCell.h
 //  EveryDo
 //
 //  Created by Angie Linton on 2017-01-24.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface ListTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

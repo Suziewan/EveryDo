@@ -7,28 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		678A1FA61E37B9AF001BFE2F /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 678A1FA51E37B9AF001BFE2F /* ListTableViewCell.m */; };
+		678A1FA91E37BD8D001BFE2F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678A1FA81E37BD8D001BFE2F /* DetailViewController.m */; };
 		67E1DFA71E37AE8B00C6FEF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E1DFA61E37AE8B00C6FEF4 /* main.m */; };
 		67E1DFAA1E37AE8B00C6FEF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E1DFA91E37AE8B00C6FEF4 /* AppDelegate.m */; };
 		67E1DFAD1E37AE8B00C6FEF4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E1DFAC1E37AE8B00C6FEF4 /* MasterViewController.m */; };
-		67E1DFB01E37AE8B00C6FEF4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E1DFAF1E37AE8B00C6FEF4 /* DetailViewController.m */; };
 		67E1DFB31E37AE8B00C6FEF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E1DFB11E37AE8B00C6FEF4 /* Main.storyboard */; };
 		67E1DFB51E37AE8B00C6FEF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67E1DFB41E37AE8B00C6FEF4 /* Assets.xcassets */; };
 		67E1DFB81E37AE8B00C6FEF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E1DFB61E37AE8B00C6FEF4 /* LaunchScreen.storyboard */; };
+		67E1DFC11E37AF5F00C6FEF4 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E1DFC01E37AF5F00C6FEF4 /* ToDo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		678A1FA41E37B9AF001BFE2F /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		678A1FA51E37B9AF001BFE2F /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		678A1FA71E37BD8D001BFE2F /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		678A1FA81E37BD8D001BFE2F /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		67E1DFA21E37AE8B00C6FEF4 /* EveryDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EveryDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E1DFA61E37AE8B00C6FEF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67E1DFA81E37AE8B00C6FEF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67E1DFA91E37AE8B00C6FEF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		67E1DFAB1E37AE8B00C6FEF4 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		67E1DFAC1E37AE8B00C6FEF4 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		67E1DFAE1E37AE8B00C6FEF4 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		67E1DFAF1E37AE8B00C6FEF4 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		67E1DFB21E37AE8B00C6FEF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67E1DFB41E37AE8B00C6FEF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67E1DFB71E37AE8B00C6FEF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67E1DFB91E37AE8B00C6FEF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67E1DFBF1E37AF5F00C6FEF4 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		67E1DFC01E37AF5F00C6FEF4 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +67,14 @@
 		67E1DFA41E37AE8B00C6FEF4 /* EveryDo */ = {
 			isa = PBXGroup;
 			children = (
-				67E1DFA81E37AE8B00C6FEF4 /* AppDelegate.h */,
-				67E1DFA91E37AE8B00C6FEF4 /* AppDelegate.m */,
+				67E1DFBF1E37AF5F00C6FEF4 /* ToDo.h */,
+				67E1DFC01E37AF5F00C6FEF4 /* ToDo.m */,
+				678A1FA41E37B9AF001BFE2F /* ListTableViewCell.h */,
+				678A1FA51E37B9AF001BFE2F /* ListTableViewCell.m */,
 				67E1DFAB1E37AE8B00C6FEF4 /* MasterViewController.h */,
 				67E1DFAC1E37AE8B00C6FEF4 /* MasterViewController.m */,
-				67E1DFAE1E37AE8B00C6FEF4 /* DetailViewController.h */,
-				67E1DFAF1E37AE8B00C6FEF4 /* DetailViewController.m */,
+				678A1FA71E37BD8D001BFE2F /* DetailViewController.h */,
+				678A1FA81E37BD8D001BFE2F /* DetailViewController.m */,
 				67E1DFB11E37AE8B00C6FEF4 /* Main.storyboard */,
 				67E1DFB41E37AE8B00C6FEF4 /* Assets.xcassets */,
 				67E1DFB61E37AE8B00C6FEF4 /* LaunchScreen.storyboard */,
@@ -79,6 +87,8 @@
 		67E1DFA51E37AE8B00C6FEF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				67E1DFA81E37AE8B00C6FEF4 /* AppDelegate.h */,
+				67E1DFA91E37AE8B00C6FEF4 /* AppDelegate.m */,
 				67E1DFA61E37AE8B00C6FEF4 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -156,10 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E1DFC11E37AF5F00C6FEF4 /* ToDo.m in Sources */,
 				67E1DFAA1E37AE8B00C6FEF4 /* AppDelegate.m in Sources */,
 				67E1DFAD1E37AE8B00C6FEF4 /* MasterViewController.m in Sources */,
+				678A1FA61E37B9AF001BFE2F /* ListTableViewCell.m in Sources */,
 				67E1DFA71E37AE8B00C6FEF4 /* main.m in Sources */,
-				67E1DFB01E37AE8B00C6FEF4 /* DetailViewController.m in Sources */,
+				678A1FA91E37BD8D001BFE2F /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +328,7 @@
 				67E1DFBE1E37AE8B00C6FEF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

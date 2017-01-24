@@ -1,13 +1,15 @@
 //
-//  DetailViewController.h
+//  ToDo.m
 //  EveryDo
 //
 //  Created by Angie Linton on 2017-01-24.
 //  Copyright © 2017 Angie Linton. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ToDo.h"
 
-@interface DetailViewController : UIViewController
+@implementation ToDo
+
 
 @end
+
