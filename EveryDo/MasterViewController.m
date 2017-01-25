@@ -13,6 +13,7 @@
 #import "ListTableViewCell.h"
 
 @interface MasterViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIButton *doneButton;
 
 @property (nonatomic) NSMutableArray<ToDo*> *toDos;
 
@@ -59,8 +60,23 @@
     todo.priority = @"5";
     todo.isComplete = NO;
     [_toDos addObject:todo];
-    
+    }
 
+
+
+/*
+- (IBAction)buttonTapped:(UIButton *)sender {
+    
+    if (self.doneButton == YES) {
+        NSLog(@"%@", self.title);
+    }
+}
+ */
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    //refresh my tableview
+    [self.tableView reloadData];
 }
 
 - (void)insertNewObject:(id)sender {
@@ -87,12 +103,44 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListTableViewCell *cell =(ListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"defaultCell" forIndexPath:indexPath];
     
-    ToDo *title = self.toDos[indexPath.row];
-    [cell.titleLabel setText:title.title];
+    // these 2 return the same object
+    //ToDo *title = self.toDos[indexPath.row];
+    //ToDo *description = self.toDos[indexPath.row];
     
-    ToDo *description = self.toDos[indexPath.row];
-    [cell.descriptionLabel setText:description.todoDescription];
+    //as proof that these 2 items are the same:
+    /*
+    Printing description of description:
+    <ToDo: 0x618000058d80>
+    Printing description of title:
+    <ToDo: 0x618000058d80>
+    */
+    
+    ToDo *todoItem = self.toDos[indexPath.row];
+    
+    [cell.titleLabel setText:todoItem.title];
+    
+    
+    if (!todoItem.isComplete) {
+        //regular
+        [cell.descriptionLabel setText:todoItem.todoDescription];
+    } else {
+        //strike through
+        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:todoItem.todoDescription];
+        [attributeString addAttribute:NSStrikethroughStyleAttributeName
+                                value:@2
+                                range:NSMakeRange(0, [attributeString length])];
+        [cell.descriptionLabel setAttributedText:attributeString];
 
+    }
+
+    
+    //1
+    
+    
+    //2
+    // take description and turn it into attributedString that
+    //Strikethrough style
+    
     ToDo *priority = self.toDos[indexPath.row];
     [cell.priorityLabel setText:priority.priority];
 

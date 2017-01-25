@@ -18,6 +18,11 @@
 
 @implementation DetailViewController
 
+- (IBAction)buttonTouched:(UIButton *)sender {
+    //get the object we are interested in
+    //get the property
+    self.todo.isComplete = YES;
+}
 
 
 - (void)viewDidLoad {
