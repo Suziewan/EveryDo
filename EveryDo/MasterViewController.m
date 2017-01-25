@@ -103,7 +103,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListTableViewCell *cell =(ListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"defaultCell" forIndexPath:indexPath];
     
-    // these 2 return the same object
+    // these 2 return the same object --> the ToDo object which holds all the parts (title, description, priority)
     //ToDo *title = self.toDos[indexPath.row];
     //ToDo *description = self.toDos[indexPath.row];
     
@@ -115,10 +115,12 @@
     <ToDo: 0x618000058d80>
     */
     
+    
+        //the class, the variable name i am creating, then  self.theArrayProperty, then where we are getting it -- the indexpath and (in this case) the row -- could be the section instead.
     ToDo *todoItem = self.toDos[indexPath.row];
     
     [cell.titleLabel setText:todoItem.title];
-    
+    //above ^ cell, the lable I want to affect, then setText:theVariableName.theProperty
     
     if (!todoItem.isComplete) {
         //regular
@@ -133,16 +135,10 @@
 
     }
 
+
     
-    //1
-    
-    
-    //2
-    // take description and turn it into attributedString that
-    //Strikethrough style
-    
-    ToDo *priority = self.toDos[indexPath.row];
-    [cell.priorityLabel setText:priority.priority];
+  //  ToDo *priority = self.toDos[indexPath.row];
+  //  [cell.priorityLabel setText:priority.priority];
 
     
     return cell;
